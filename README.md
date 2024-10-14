@@ -1,4 +1,4 @@
-# Portfolio_Optimization_Basic
+# Portfolio_Optimization
 Portfolio Optimization Project This project implements a portfolio optimization algorithm using historical price data of selected financial assets. The optimization is based on the Markowitz Mean-Variance framework and uses the Sharpe Ratio as the objective function to maximize returns while minimizing risk.
 It includes visualizations such as price trends, normalized prices, volatility clustering, and the Efficient Frontier to provide a comprehensive analysis of portfolio performance. 
 
