@@ -1,28 +1,29 @@
 # Portfolio_Optimization
-Portfolio Optimization Project This project implements a portfolio optimization algorithm using historical price data of selected financial assets. The optimization is based on the Markowitz Mean-Variance framework and uses the Sharpe Ratio as the objective function to maximize returns while minimizing risk.
-It includes visualizations such as price trends, normalized prices, volatility clustering, and the Efficient Frontier to provide a comprehensive analysis of portfolio performance. 
+The portfolio consists of five carefully selected stocks: Apple (AAPL), Johnson & Johnson (JNJ), Exxon Mobil (XOM), Procter & Gamble (PG), and Lockheed Martin (LMT). The selection ensures a balance between growth, stability, and diversification across key sectors like Technology, Healthcare, Energy, Consumer Staples, and Defense.
 
-Features Optimal Portfolio Weights: 
-Calculates the optimal allocation of assets in the portfolio to maximize the Sharpe Ratio.
-Price Trends: Visualizes the historical price trends of the selected assets.
-Normalized Prices: Displays normalized prices to compare relative performance over time.
-Volatility Clustering: Observes volatility patterns by plotting daily returns.
-Efficient Frontier: Plots the efficient frontier to show the trade-off between portfolio risk and return. 
-Python: The main programming language. 
-Pandas: For data manipulation and analysis. 
-NumPy: For numerical computations. Matplotlib: For plotting the visualizations. 
-SciPy: Used for the optimization routines.
-yfinance: For fetching historical stock data. 
-FRED API: To retrieve the risk-free rate from the U.S. Treasury data. 
+#Justification for Stock Selection:
 
-**PROJECT OVERVIEW**
+AAPL (Technology): High-growth potential and market leader in innovation.
+JNJ (Healthcare): Defensive stock with stable returns and low correlation to tech.
+XOM (Energy): Inflation hedge and exposure to cyclical energy markets.
+PG (Consumer Staples): Stability during downturns with reliable dividends.
+LMT (Defense): Non-cyclical sector with steady growth from government defence contracts.
 
-**(1).** Data Collection Historical price data of assets is collected using yfinance. For this project, we use the following assets:  SPY (S&P 500 ETF) BND (Bond ETF) GLD (Gold ETF) QQQ (NASDAQ-100 ETF) VTI (Total Stock Market ETF) The data spans 5 years and includes adjusted close prices. 
+#Key Outputs
+Optimal Weights:
+AAPL: 50%
+JNJ: 0%
+XOM: 25.86%
+PG: 24.14%
+LMT: 0%
 
-**(2).** Portfolio Optimization The portfolio optimization is based on:  Expected Return: The annualized mean return of each asset. Portfolio Risk (Standard Deviation): Calculated using the covariance matrix of the log-normal returns. Sharpe Ratio: The portfolio is optimized to maximize the Sharpe Ratio, which is the ratio of excess return to risk.
+#Portfolio Analytics:
+Expected Annual Return: 19.28%
+Portfolio Volatility: 22.94%
+Sharpe Ratio: 0.6617
 
-**(3).** Risk-Free Rate The risk-free rate is fetched from the FRED API using the 10-year U.S. Treasury yield.  
-
-**(4).** Constraints No short selling: Asset weights are bounded between 0 and 0.5 (maximum of 50% in a single asset). Weights must sum to 1 (fully invested portfolio). 
-
-**(5).** Visualizations The following plots are included in the project:  Price Trends: The historical price trends for each asset. Normalized Prices: Shows the performance of each asset relative to a starting point (normalized to 1). Returns and Volatility Clustering: Plots daily returns to observe periods of volatility. Efficient Frontier: A curve showing the risk-return trade-off for different portfolio compositions. How to Run the Project Prerequisites Make sure you have the following libraries installed:  yfinance pandas numpy matplotlib scipy fredapi
+#Conclusions
+The optimization heavily favours AAPL (50%), reflecting its high expected returns relative to risk.
+XOM (25.86%) and PG (24.14%) contribute to portfolio diversification.
+JNJ and LMT are excluded due to suboptimal risk-return trade-offs under the constraints.
+However, excluding stocks like JNJ and LMT might indicate overfitting or an extreme focus on short-term risk-return metrics.
